@@ -1,6 +1,10 @@
 import React from "react";
+import { IconType } from "./type/Icon.type";
 
-function RegIcon() {
+const RegIcon = ({
+  className = "h-10 w-10",
+  color = "",
+}: IconType): JSX.Element => {
   return (
     <svg
       width="55"
@@ -15,6 +19,6 @@ function RegIcon() {
       />
     </svg>
   );
-}
+};
 
 export default RegIcon;
