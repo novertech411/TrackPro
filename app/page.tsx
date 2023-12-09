@@ -3,7 +3,7 @@ import DashboardIcon from "@/components/icons/DashboardIcon";
 import Dashboard from "@/app/dashboard/page";
 function page() {
   return (
-    <div className=" ">
+    <div className="  ">
       <StyleGuide />
     </div>
   );

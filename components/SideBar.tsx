@@ -20,21 +20,21 @@ const menus: {
 }[] = [
   {
     id: 1,
-    url: "",
+    url: "/dashboard",
     icon: DashboardIcon,
     label: "Dashboard",
     isActive: false,
   },
   {
     id: 2,
-    url: "livestock",
+    url: "/dashboard/livestock",
     icon: LivestockIcon,
     label: "LiveStock",
     isActive: false,
   },
   {
     id: 3,
-    url: "notification",
+    url: "/dashboard/notification",
     icon: NotificationIcon,
     label: "Notification",
     isActive: false,
@@ -45,7 +45,7 @@ function SideBar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-max h-screen  bg-white  py-[15px] font-inter leading-normal not-italic flex flex-col justify-between gap-10 ">
+    <div className="w-max h-screen  bg-white  py-10 font-inter leading-normal not-italic flex flex-col justify-between gap-10 ">
       <div>
         <div className="w-[100px] mx-[60px]    ">
           <Image src={logo} alt="TrackPro logo " className="mx-[auto]  " />
@@ -55,12 +55,10 @@ function SideBar() {
         <div className="mt-[75px]">
           <div className="w-max">
             {menus.map((items) => {
-              const isActive =
-                pathname === "/dashboard" && !items.url
-                  ? true
-                  : pathname.split("/").at(-1) === items.url;
+              const isActive = pathname === items.url ? true : false;
+              console.log(pathname);
               return (
-                <Link href={`dashboard/${items.url}`} key={items.id}>
+                <Link href={`${items.url}`} key={items.id}>
                   <div
                     key={items.id}
                     className={clsx(
@@ -73,8 +71,8 @@ function SideBar() {
                         <items.icon
                           color={
                             isActive
-                              ? "text-[#788B9A]"
-                              : "text-white group-hover:!text-primary"
+                              ? "text-white"
+                              : "text-[#788B9A] group-hover:text-white"
                           }
                         />
                       }
@@ -103,7 +101,7 @@ function SideBar() {
           <p className="te">Easin Aarfat</p>
           <p className="text-[#788B9A]">Admin</p>
         </div>
-        <ExitIcon />
+        <ExitIcon className="group-hover:text-white" />
       </div>
     </div>
   );

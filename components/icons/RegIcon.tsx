@@ -2,7 +2,7 @@ import React from "react";
 import { IconType } from "./type/Icon.type";
 
 const RegIcon = ({
-  className = "h-10 w-10",
+  className = "h-8 w-8",
   color = "",
 }: IconType): JSX.Element => {
   return (
