@@ -9,6 +9,10 @@ function Linechart() {
   useEffect(() => {
     const ctx = document.getElementById("myChart").getContext("2d");
 
+    const gradientFill = ctx.createLinearGradient(500, 10, 80, 0);
+    gradientFill.addColorStop(0, "rgba(32, 55, 41, 1)");
+    gradientFill.addColorStop(1, "rgba(61, 198, 123, 0.5)");
+
     const myChart = new Chart(ctx, {
       type: "line",
 
@@ -38,21 +42,12 @@ function Linechart() {
 
         datasets: [
           {
-            data: [86, 114, 106, 106, 107, 111, 133, 70, 80, 101, 108, 132],
+            data: [100, 120, 125, 128, 130, 125, 130, 131, 120, 140, 135, 130],
             label: "Applied",
-            borderColor: "#F4AF29",
-            backgroundColor: "#F4AF29",
-            fill: false,
-            legend: {
-              display: false,
-            },
-          },
-          {
-            data: [70, 90, 44, 60, 83, 90, 100],
-            label: "Accepted",
-            borderColor: "#27AE60",
-            backgroundColor: "#27AE60",
-            fill: false,
+            pointRadius: 0,
+            borderColor: gradientFill,
+            backgroundColor: gradientFill,
+            fill: true,
           },
         ],
       },
@@ -64,10 +59,10 @@ function Linechart() {
   }, []);
 
   return (
-    <div className=" bg-white rounded-md pt-0   w-full h-fit my-auto  max-h-[500px]  ">
-      <p className="font-[500] text-[18px] ">Report</p>
+    <div className=" bg-white rounded-md p-[25px]  w-full h-full  ">
+      <p className="font-[500] text-[18px] mb-[25px] ">Report</p>
       <div className="">
-        <canvas id="myChart" className=""></canvas>
+        <canvas id="myChart" className="h-fit"></canvas>
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ function page() {
         </div>
       </div>
 
-      <div className="flex  justify-between  mt-[30px] max-h-[300px]">
+      <div className="flex  justify-between  mt-[30px] h-[550px] ">
         <div className="w-[60%]">
           <Linechart />
         </div>

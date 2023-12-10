@@ -52,9 +52,9 @@ function doughnut() {
   }, []);
 
   return (
-    <div className="p-[25px]  bg-white rounded-lg  max-h-[500px]  w-full h-fit my-auto">
+    <div className="p-[25px]  bg-white rounded-lg    w-full h-full my-auto  ">
       <p className="font-[500] text-[18px]">Analytics</p>
-      <div className=" max-w-[300px] mx-[auto] relative mt-[20px] ">
+      <div className=" max-w-[300px] mx-[auto] relative mt-[50px] ">
         <div className=" absolute inset-1/3 text-center">
           <p className="font-[700] text-[28px]">80%</p>
           <p className="font-[500] text-[16px] flex">Mortality Rate</p>

@@ -93,7 +93,7 @@ function SideBar() {
         </div>
       </div>
 
-      <div className=" px-[24px] my-[34px] py-[13px]  flex justify-between items-center  hover:bg-primary  hover:rounded-r-lg group">
+      <div className=" group px-[24px] my-[34px] py-[13px]  flex justify-between items-center  hover:bg-primary  hover:rounded-r-lg ">
         <div className="rounded-full bg-white">
           <Image src={avater} alt="" />
         </div>
@@ -101,7 +101,7 @@ function SideBar() {
           <p className="te">Easin Aarfat</p>
           <p className="text-[#788B9A]">Admin</p>
         </div>
-        <ExitIcon className="group-hover:text-white" />
+        <ExitIcon color=" text-primary  group-hover:text-white" />
       </div>
     </div>
   );
