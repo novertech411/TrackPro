@@ -24,7 +24,7 @@ const TableBody: React.FC<TableBodyProps> = ({ data, columns }) => {
                 return (
                   <td
                     key={i}
-                    className="px-4 py-4  rounded-sm  bg-white mb-4 whitespace-nowrap tracking-[0.1px]  "
+                    className="px-4 py-4 my-[12px]  text-center rounded-sm  bg-white mb-4 whitespace-nowrap tracking-[0.1px]  "
                   >
                     {each["chipTitle"] ? (
                       <Chip
@@ -38,7 +38,7 @@ const TableBody: React.FC<TableBodyProps> = ({ data, columns }) => {
                             ? "vaccinated"
                             : "notvaccinated"
                         }
-                        classes="w-full text-center font-normal"
+                        classes=" text-center font-normal"
                       />
                     ) : (
                       row[each["key"]]

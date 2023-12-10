@@ -74,34 +74,63 @@ function page() {
         </div>
       </div>
 
-      <Chip label="vaccinated" color={"notvaccinated"} />
-
-      <Table
-        tableData={[
-          {
-            tag: "#29293",
-            age: "3",
-            sex: "male",
-            bread: "cattle",
-            method: "trasfer",
-            vstatus: "vaccinated",
-          },
-        ]}
-        tableColumn={[
-          { label: "Tag no", key: "tag" },
-          { label: "Age", key: "age" },
-          { label: "Sex", key: "sex" },
-          { label: "Bread", key: "bread" },
-          { label: "Method of Possession", key: "method" },
-          {
-            label: "Vaccination Status",
-            key: "vstatus",
-            chipTitle: "status",
-            successChip: "vaccinated",
-            errorChip: "notvaccinated",
-          },
-        ]}
-      />
+      {/* <Chip label="vaccinated" color={"notvaccinated"} /> */}
+      <div className="mt-[60px]">
+        <div className="bg-white rounded-lg  p-[40px]">
+          {" "}
+          <p className="text-[18px] font-[500]">Recent Additions</p>{" "}
+        </div>
+        <Table
+          tableData={[
+            {
+              tag: "#29293",
+              age: "3",
+              sex: "male",
+              bread: "cattle",
+              method: "trasfer",
+              vstatus: "vaccinated",
+            },
+            {
+              tag: "#29293",
+              age: "3",
+              sex: "male",
+              bread: "cattle",
+              method: "bitrh",
+              vstatus: "notvaccinated",
+            },
+            {
+              tag: "#29293",
+              age: "3",
+              sex: "male",
+              bread: "cattle",
+              method: "trasfer",
+              vstatus: "vaccinated",
+            },
+            {
+              tag: "#29293",
+              age: "3",
+              sex: "male",
+              bread: "cattle",
+              method: "birth",
+              vstatus: "notvaccinated",
+            },
+          ]}
+          tableColumn={[
+            { label: "Tag no", key: "tag" },
+            { label: "Age", key: "age" },
+            { label: "Sex", key: "sex" },
+            { label: "Bread", key: "bread" },
+            { label: "Method of Possession", key: "method" },
+            {
+              label: "Vaccination Status",
+              key: "vstatus",
+              chipTitle: "status",
+              successChip: "vaccinated",
+              errorChip: "notvaccinated",
+            },
+          ]}
+        />
+      </div>
     </div>
   );
 }
