@@ -7,6 +7,8 @@ import GoatIcon from "@/components/icons/GoatIcon";
 import SheepIcon from "@/components/icons/SheepIcon";
 import Linechart from "@/components/Linechart";
 import Doughnut from "@/components/doughnut";
+import Chip from "@/components/Chip";
+import Table from "@/components/Table";
 
 function page() {
   return (
@@ -71,6 +73,35 @@ function page() {
           <Doughnut />
         </div>
       </div>
+
+      <Chip label="vaccinated" color={"notvaccinated"} />
+
+      <Table
+        tableData={[
+          {
+            tag: "#29293",
+            age: "3",
+            sex: "male",
+            bread: "cattle",
+            method: "trasfer",
+            vstatus: "vaccinated",
+          },
+        ]}
+        tableColumn={[
+          { label: "Tag no", key: "tag" },
+          { label: "Age", key: "age" },
+          { label: "Sex", key: "sex" },
+          { label: "Bread", key: "bread" },
+          { label: "Method of Possession", key: "method" },
+          {
+            label: "Vaccination Status",
+            key: "vstatus",
+            chipTitle: "status",
+            successChip: "vaccinated",
+            errorChip: "notvaccinated",
+          },
+        ]}
+      />
     </div>
   );
 }
