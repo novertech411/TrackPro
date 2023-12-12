@@ -1,6 +1,7 @@
 import React from "react";
 
 import Chip from "./Chip";
+import ThreeIcon from "./icons/ThreeIcon";
 
 interface TableBodyProps {
   data: any[];
@@ -47,6 +48,10 @@ const TableBody: React.FC<TableBodyProps> = ({ data, columns }) => {
                 );
               })}
             </>
+            <td className="px-4 py-4 my-[12px] mb-4 whitespace-nowrap bg-white">
+              {" "}
+              <ThreeIcon />{" "}
+            </td>
           </tr>
         );
       })}

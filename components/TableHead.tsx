@@ -1,5 +1,7 @@
 import React from "react";
-import Arrow from "@/public/images/";
+
+import ThreeIcon from "./icons/ThreeIcon";
+import ArrowIcon from "./icons/ArrowIcon";
 
 interface TableColumn {
   key: string;
@@ -12,17 +14,24 @@ interface TableHeadProps {
 
 const TableHead: React.FC<TableHeadProps> = ({ columns }) => {
   return (
-    <thead className="bg-white  rounded-md">
+    <thead className=" bg-white pt-[10px] ">
       <tr>
         {columns.map((column) => (
           <th
             key={column.key}
             scope="col"
-            className="pl-4 py-4 pr-6 text-sm font-inter not-italic font-medium  text-center  "
+            className="pl-4 py-14 pr-6 text-sm font-inter not-italic font-medium bg-white rounded-md  "
           >
-            {column.label}
+            <div className="flex  gap-2 items-center  justify-center">
+              {" "}
+              {column.label} <ArrowIcon />{" "}
+            </div>
           </th>
         ))}
+        <th className=" pl-4 py-4 mx-[30px]  bg-white rounded-md">
+          {" "}
+          <ThreeIcon className="" />
+        </th>
       </tr>
     </thead>
   );

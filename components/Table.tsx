@@ -16,7 +16,7 @@ const Table = ({
   tableData: any[];
 }) => {
   return (
-    <div className="overflow-x-auto font-inter rounded-lg bg-white">
+    <div className="overflow-x-auto font-inter rounded-lg">
       <table className="min-w-full ">
         <TableHead columns={tableColumn} />
         <TableBody data={tableData} columns={tableColumn} />
