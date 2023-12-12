@@ -21,7 +21,7 @@ function page() {
           </div>
         </div>
 
-        <Table
+        {/* <Table
           tableData={[
             {
               tag: "#29293",
@@ -70,7 +70,7 @@ function page() {
               errorChip: "notvaccinated",
             },
           ]}
-        />
+        /> */}
       </div>
       <div className=" w-[20%]">
         <LivestockInfo />
