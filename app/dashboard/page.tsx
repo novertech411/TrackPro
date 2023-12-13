@@ -12,7 +12,7 @@ import Table from "@/components/Table";
 
 function page() {
   return (
-    <div className="  ">
+    <div className="  pl-8 pt-5  overflow-y-scroll no-scrollbar ">
       <div className="flex justify-between  items-center">
         <p className="text-[25px] text-primary font-[700]">Dashborad</p>
         <div className="flex text-white bg-primary py-[16px] px-[32px] gap-5 rounded-lg">

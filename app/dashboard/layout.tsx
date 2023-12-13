@@ -8,9 +8,7 @@ export default async function Layout({
   return (
     <div className="w-full h-screen flex bg-[#F1F4FA] ">
       <SideBar />
-      <div className="flex-1 h-screen overflow-y-scroll px-8 pt-5  ">
-        {children}
-      </div>
+      <div className="flex-1 h-screen overflow-y-scroll  ">{children}</div>
     </div>
   );
 }

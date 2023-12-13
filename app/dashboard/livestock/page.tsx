@@ -4,11 +4,11 @@ import dropdown from "@/public/images/dropDownArrow.png";
 import AddIcon from "@/components/icons/AddIcon";
 import Table from "@/components/Table";
 import LivestockInfo from "@/components/LivestockInfo";
-
+import "@/app/globals.css";
 function page() {
   return (
-    <div className=" flex whitespace-nowrap overflow-auto scrollbar-hide ">
-      <div className="w-[80%]">
+    <div className=" flex     overflow-y-scroll no-scrollbar">
+      <div className="w-full  pt-5  px-8 overflow-y-scroll no-scrollbar ">
         <div className="flex justify-between  items-center mb-[32px]">
           <div className="flex text-white bg-primary py-[16px] px-[32px] gap-5 rounded-lg">
             <p>Cattle</p>
@@ -21,7 +21,7 @@ function page() {
           </div>
         </div>
 
-        {/* <Table
+        <Table
           tableData={[
             {
               tag: "#29293",
@@ -70,9 +70,9 @@ function page() {
               errorChip: "notvaccinated",
             },
           ]}
-        /> */}
+        />
       </div>
-      <div className=" w-[20%]">
+      <div className=" w-[25%]   ">
         <LivestockInfo />
       </div>
     </div>

@@ -26,6 +26,9 @@ d_red: "#FF5656",
 
     },
   },
-  plugins: [],
+  plugins: [   
+
+    
+  ],
 }
 
